@@ -1,4 +1,4 @@
-# Cube Protocol 🧊
+# Cube 🧊
 
 <div align="center">
 <img 
