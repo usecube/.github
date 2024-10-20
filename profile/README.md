@@ -30,9 +30,86 @@ Following Jesse Pollak's vision of an Onchain Economy, Cube aims to be a part of
   style="width:40%; height:40%;"
 />
 
+## Features 🦶🏻
+1. 🧢 Basenames: Users can personalize their identity with unique custom basenames.
+
+2. 🏘️ Paymaster: Gas and other on-chain operations are abstracted from the user.
+
+3. 😌 Onchainkit: User Experience streamlined and 10x because of Onchainkit SDK.
+
+4. 💳 ERC4626: Aave USDC Vault Strategy Valt on Base for merchants to generate onchain yield.
+
+5. ⛴️ Merchant Registry: Registry of onchain merchants to provide food / good / services onchain.
+
 ## Architecture 🏛️
 <img 
   src="https://github.com/usecube/.github/blob/main/assets/png/cube-architecture-bg.png?raw=true" 
   style="width:100%; height:100%;"
 />
 </div>
+
+## Stack 🌐
+- **Frontend Stack**: NextJS, Typescript, Wagmi, Viem
+- **Backend Stack**: Supabase, PostgreSQL, DrizzleORM
+- **Smart Contracts**: Foundry, Solidity
+
+## Limitations 🦁
+1. **Basenames cannot be completely gasless** for the user due to `_validatePayment` function in `RegistrarController.sol`
+```
+/// @notice Enables a caller to register a name.
+    ///
+    /// @dev Validates the registration details via the `validRegistration` modifier.
+    ///     This `payable` method must receive appropriate `msg.value` to pass `_validatePayment()`.
+    ///
+    /// @param request The `RegisterRequest` struct containing the details for the registration.
+    function register(RegisterRequest calldata request) public payable validRegistration(request) {
+        uint256 price = registerPrice(request.name, request.duration);
+
+        _validatePayment(price);
+
+        _register(request);
+
+        _refundExcessEth(price);
+    }
+```
+2. Coinbase Smart Wallet bug (using wagmi hooks will always default to Ethereum mainnet despite setting ChainId). [Video Link](https://drive.google.com/file/d/1QzVvOUiQeuPghsglc4HkGfMtyCE7d_Sp/view?usp=sharing)
+
+```
+const hash = await writeContracts(wagmiConfig, {
+          contracts: [
+            {
+              address: BASE_SEPOLIA_REGISTRAR_CONTROLLER_ADDRESS,
+              abi: RegistrarControllerAbi,
+              functionName: "register",
+              args: [
+                {
+                  name: registrationArgs.name,
+                  owner: registrationArgs.owner,
+                  duration: registrationArgs.duration,
+                  resolver: registrationArgs.resolver,
+                  data: registrationArgs.data,
+                  reverseRecord: registrationArgs.reverseRecord,
+                },
+              ],
+            },
+          ],
+          capabilities: {
+            paymasterService: {
+              chainId: BASE_SEPOLIA_CHAIN_ID,
+              url: process.env
+                .NEXT_PUBLIC_CDP_PAYMASTER_AND_BUNDLER_ENDPOINT as string,
+            },
+          },
+          chainId: BASE_SEPOLIA_CHAIN_ID,
+        });
+```
+## Improvements 🔨
+1. Stablecoins Price Feeds for more accurate conversions.
+2. Integrate more stablecoins into Cube (EURC).
+3. More ERC4626 Choices (Aave + Morpho).
+
+## Links 🔗
+- [Frontend + Backend Repository](https://github.com/dannweeeee/cube-dapp) - NextJS + Typescript Frontend <> Supabase + DrizzleORM Backend
+- [Smart Contracts](https://github.com/dannweeeee/cube-contracts) - Foundry + Solidity
+
+
