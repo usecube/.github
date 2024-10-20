@@ -8,3 +8,10 @@
   style="width:30%; height:30%;"
 />
 </div>
+
+## Architecture
+<img 
+  src="https://github.com/usecube/.github/blob/main/assets/png/cube-architecture.png?raw=true" 
+  style="width:100%; height:100%;"
+/>
+</div>
