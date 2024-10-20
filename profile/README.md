@@ -26,7 +26,7 @@ Following Jesse Pollak's vision of an Onchain Economy, Cube aims to be a part of
 5. Once you have Base Sepolia USDC in your Coinbase Smart Wallet, you are ready to Scan & Pay! Scan the following QR Code and enter the amount in SGD that you would like to pay.
 
 <img 
-  src="https://github.com/usecube/.github/blob/main/assets/png/333-carrot-cake-qr.png?raw=true" 
+  src="https://github.com/usecube/.github/blob/main/assets/png/333-carrot-cake-qr.jpeg?raw=true" 
   style="width:60%; height:60%;"
 />
 
