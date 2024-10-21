@@ -107,6 +107,7 @@ const hash = await writeContracts(wagmiConfig, {
 1. Stablecoins Price Feeds for more accurate conversions.
 2. Integrate more stablecoins into Cube (EURC).
 3. More ERC4626 Choices (Aave + Morpho).
+4. Integrate RIP-7755 by Onchainkit
 
 ## Links 🔗
 - [Frontend + Backend Repository](https://github.com/dannweeeee/cube-dapp) - NextJS + Typescript Frontend <> Supabase + DrizzleORM Backend
