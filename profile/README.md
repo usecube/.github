@@ -4,7 +4,7 @@
 
 <div align="center">
 <img 
-  src="https://github.com/usecube/.github/blob/main/assets/png/cube-blue.png?raw=true" 
+  src="https://github.com/usecube/.github/blob/main/assets/png/cube-banner.png?raw=true" 
   style="width:30%; height:30%;"
 />
 </div>
@@ -110,7 +110,7 @@ const hash = await writeContracts(wagmiConfig, {
 4. Integrate RIP-7755 by Onchainkit
 
 ## Links 🔗
-- [Frontend + Backend Repository](https://github.com/dannweeeee/cube-dapp) - NextJS + Typescript Frontend <> Supabase + DrizzleORM Backend
-- [Smart Contracts](https://github.com/dannweeeee/cube-contracts) - Foundry + Solidity
+- [Frontend + Backend Repository](https://github.com/usecube/cube-dapp) - NextJS + Typescript Frontend <> Supabase + DrizzleORM Backend
+- [Smart Contracts](https://github.com/usecube/cube-contracts) - Foundry + Solidity
 
 
