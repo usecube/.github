@@ -25,10 +25,12 @@ Following Jesse Pollak's vision of an Onchain Economy, Cube aims to be a part of
 4. Head to [Circle Faucet](https://faucet.circle.com/) to get Base Sepolia USDC Funds (this is required to transact on Cube).
 5. Once you have Base Sepolia USDC in your Coinbase Smart Wallet, you are ready to Scan & Pay! Scan the following QR Code and enter the amount in SGD that you would like to pay.
 
+<div align="center">
 <img 
   src="https://github.com/usecube/.github/blob/main/assets/png/333-carrot-cake-qr.jpeg?raw=true" 
-  style="width:40%; height:40%;"
+  style="width:30%; height:30%;"
 />
+</div>
 
 ## Features 🦶🏻
 1. 🧢 Basenames: Users can personalize their identity with unique custom basenames.
