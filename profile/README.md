@@ -1,7 +1,7 @@
 # Cube 🧊
 
 ### Breaking the ice in finance one cube at a time
-##### 🏆 Winner of [Base Around The World Buildathon](https://based-sea.devfolio.co/)
+#### 🏆 Winner of [Base Around The World Buildathon](https://based-sea.devfolio.co/)
 
 <div align="center">
 <img 
